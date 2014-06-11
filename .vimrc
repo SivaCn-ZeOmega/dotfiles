@@ -74,9 +74,9 @@ if has("gui_running")
     set background=dark   " adapt colors for background
     set guioptions-=T
     set list listchars=tab:▷⋅,trail:⋅,nbsp:⋅ " mark trailing white space
-    colorscheme brookstream
+    colorscheme vibrantink
 else
-    colorscheme elflord   " use this color scheme
+    colorscheme vibrantink   " use this color scheme
     set background=dark   " adapt colors for background
 endif
 
