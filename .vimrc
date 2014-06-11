@@ -99,7 +99,8 @@ if has("autocmd")
     au FileType py inoremap # X#
     au FileType py set expandtab
     au FileType py set omnifunc=pythoncomplete#Complete
-    autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+    autocmd BufWritePost * !python -m py_compile %
+    " autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
     autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
     "au BufRead mutt*[0-9] set tw=72
     
